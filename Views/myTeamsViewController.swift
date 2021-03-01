@@ -22,7 +22,8 @@ class myTeamsViewController: UIViewController {
         super.viewDidLoad()
         configureTable()
         getTeams()
-        
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(refreshData), name: Notification.Name("deletedTeam"), object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,7 +32,6 @@ class myTeamsViewController: UIViewController {
         DispatchQueue.main.async {
             
             if self.teams.count > 0 {
-                print("called")
                 self.teamsTableView.reloadData()
             } else {
                 self.teamsTableView.setEmptyView(title: "Aún no tienes equipos.", message: "Puedes crear uno con el boton de arriba a la derecha. ⚡️")
@@ -40,6 +40,14 @@ class myTeamsViewController: UIViewController {
     }
     
     // MARK: Funcs
+    
+    @objc func refreshData() {
+        teams.removeAll()
+        getTeams()
+        DispatchQueue.main.async {
+            self.teamsTableView.reloadData()
+        }
+    }
     
     // Loading the tableview
     func configureTable() {
@@ -56,11 +64,13 @@ class myTeamsViewController: UIViewController {
     func getTeams() {
         database.child("TeamsDic").observeSingleEvent(of: .value, with: { snapshot in
             let realvalue = snapshot.value
-            print(realvalue)
             guard let value = snapshot.value as? Dictionary<String, Any> else {
                 print("No teams")
                 return
             }
+            
+            print(value)
+            
             self.teams.append(value)
         })
     }
@@ -91,7 +101,7 @@ extension myTeamsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 190
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,6 +110,28 @@ extension myTeamsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let dictKeys = Array(teams)
         cell.titleText.text = "\(dictKeys[indexPath.row].keys)"
+        let whatAName = "\(dictKeys[indexPath.row].keys)"
+        print(whatAName)
+        let items = teams[indexPath.row]
+        print(items.count)
+        let nameOfTeam = items["Brandon"] as! Dictionary<String,AnyObject>
+        print(nameOfTeam.count)
+        let pokemones = nameOfTeam["Pokemones"] as! [Dictionary<String, AnyObject>]
+        print(pokemones.count)
+        let names = pokemones[indexPath.row]
+        print(names.count)
+        let realName = names["name"] as? String
+        print(names.count)
+        cell.pokemonQUa.text = "\(pokemones.count)"
+        cell.teamName = whatAName
+        cell.delegate = self
         return cell
+    }
+}
+
+extension myTeamsViewController: deleteATeam {
+    func deleteATeam(nameOfTeam: String) {
+        database.child("TeamDic").child(nameOfTeam).removeValue()
+        NotificationCenter.default.post(name: Notification.Name("teamDeleted"), object: nil)
     }
 }

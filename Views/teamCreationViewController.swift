@@ -133,3 +133,10 @@ extension teamCreationViewController: UITableViewDelegate, UITableViewDataSource
     
     
 }
+
+extension teamCreationViewController: deleteATeam {
+    func deleteATeam(nameOfTeam: String) {
+        database.child("TeamDic").child(nameOfTeam).removeValue()
+        NotificationCenter.default.post(name: Notification.Name("teamDeleted"), object: nil)
+    }
+}
