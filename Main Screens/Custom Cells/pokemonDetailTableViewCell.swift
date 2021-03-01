@@ -21,14 +21,16 @@ class pokemonDetailTableViewCell: UITableViewCell {
         setupView()
     }
     
+    override func prepareForReuse() {
+        pokemonImage.image = nil
+        pokemonName.text = ""
+    }
+    
     func setupView() {
         redColorBackground.layer.cornerRadius = 14
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+    }    
 }

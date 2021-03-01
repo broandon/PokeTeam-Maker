@@ -16,7 +16,7 @@ class addTeamPopUpViewController: UIViewController {
     @IBOutlet weak var addPokemonButton: UIButton!
     @IBOutlet weak var teamName: UITextField!
     @IBOutlet weak var teamDescription: UITextField!
-    var teams: [Dictionary<String, Any>] = [[:]]
+    var teams: [Dictionary<String, Any>] = []
     var newTeam: Dictionary<String, Any> = ["name": "NewTeam", "description": "Some description", "Pokemons": ["name":"bulbausur"]]
     
     override func viewDidLoad() {
@@ -38,30 +38,32 @@ class addTeamPopUpViewController: UIViewController {
             return
         }
         let creatingTeam = ["name": "\(teamName.text!)", "description": "\(teamDescription.text!)", "Pokemons":[]] as [String : Any]
-        self.database.child("TeamsDic").child(teamName.text!).setValue(creatingTeam)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
-            let newPokemons = [["name":"bulbausaur", "Ability":"Fire", "Weight":"123"], ["name":"bulbausaur", "Ability":"Fire", "Weight":"123"], ["name":"bulbausaur", "Ability":"Fire", "Weight":"123"]]
-            self.database.child("TeamsDic").child("Titanes").child("Pokemones").setValue(newPokemons)
-        }
+        self.teams.append(creatingTeam)
+        self.database.child("TeamsDic").setValue(self.teams)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
-                       
-            self.database.child("TeamsDic").child("Titanes").child("Pokemones").observeSingleEvent(of: .value, with: { snapshot in
-                guard let value = snapshot.value as? [Dictionary<String, Any>] else {
-                    print("No teams")
-                    return
-                }
-                
-                print(value)
-                var oldview = value as? [Dictionary<String,Any>]
-                let newPokemon = ["name":"bulbausaur", "Ability":"Fire", "Weight":"123"]
-                oldview?.append(newPokemon)
-                self.database.child("TeamsDic").child("Titanes").child("Pokemones").setValue(oldview)
-
-            })
-
-            
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+//            let newPokemons = [["name":"bulbausaur", "Ability":"Fire", "Weight":"123"], ["name":"bulbausaur", "Ability":"Fire", "Weight":"123"], ["name":"bulbausaur", "Ability":"Fire", "Weight":"123"]]
+//            self.database.child("TeamsDic").child("Titanes").child("Pokemones").setValue(newPokemons)
+//        }
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
+//
+//            self.database.child("TeamsDic").child("Titanes").child("Pokemones").observeSingleEvent(of: .value, with: { snapshot in
+//                guard let value = snapshot.value as? [Dictionary<String, Any>] else {
+//                    print("No teams")
+//                    return
+//                }
+//
+//                print(value)
+//                var oldview = value as? [Dictionary<String,Any>]
+//                let newPokemon = ["name":"bulbausaur", "Ability":"Fire", "Weight":"123"]
+//                oldview?.append(newPokemon)
+//                self.database.child("TeamsDic").child("Titanes").child("Pokemones").setValue(oldview)
+//
+//            })
+//
+//
+//        }
 
     }
     

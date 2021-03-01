@@ -33,6 +33,11 @@
 		9DD482D125ECDC6B00D18655 /* pokemonDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DD482CF25ECDC6B00D18655 /* pokemonDetailTableViewCell.xib */; };
 		9DD482FA25ECF0A500D18655 /* myTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD482F825ECF0A500D18655 /* myTeamsViewController.swift */; };
 		9DD482FB25ECF0A500D18655 /* myTeamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DD482F925ECF0A500D18655 /* myTeamsViewController.xib */; };
+		9DFA455E25ED1A86006E3B65 /* teamCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA455C25ED1A86006E3B65 /* teamCellTableViewCell.swift */; };
+		9DFA455F25ED1A86006E3B65 /* teamCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA455D25ED1A86006E3B65 /* teamCellTableViewCell.xib */; };
+		9DFA456325ED3CFB006E3B65 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA456225ED3CFB006E3B65 /* UITableViewExtensions.swift */; };
+		9DFA456725ED4204006E3B65 /* teamCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA456525ED4204006E3B65 /* teamCreationViewController.swift */; };
+		9DFA456825ED4204006E3B65 /* teamCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA456625ED4204006E3B65 /* teamCreationViewController.xib */; };
 		D25656D8C5DB9DDE175E9313 /* Pods_PokeTeam_Maker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CB820DA31081B0C45B3042 /* Pods_PokeTeam_Maker.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +73,11 @@
 		9DD482CF25ECDC6B00D18655 /* pokemonDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pokemonDetailTableViewCell.xib; sourceTree = "<group>"; };
 		9DD482F825ECF0A500D18655 /* myTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTeamsViewController.swift; sourceTree = "<group>"; };
 		9DD482F925ECF0A500D18655 /* myTeamsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myTeamsViewController.xib; sourceTree = "<group>"; };
+		9DFA455C25ED1A86006E3B65 /* teamCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamCellTableViewCell.swift; sourceTree = "<group>"; };
+		9DFA455D25ED1A86006E3B65 /* teamCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = teamCellTableViewCell.xib; sourceTree = "<group>"; };
+		9DFA456225ED3CFB006E3B65 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		9DFA456525ED4204006E3B65 /* teamCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamCreationViewController.swift; sourceTree = "<group>"; };
+		9DFA456625ED4204006E3B65 /* teamCreationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = teamCreationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,8 @@
 				9D2B8DEE25EC6B7200FEEEFF /* regionsTableViewCell.xib */,
 				9DD482CE25ECDC6B00D18655 /* pokemonDetailTableViewCell.swift */,
 				9DD482CF25ECDC6B00D18655 /* pokemonDetailTableViewCell.xib */,
+				9DFA455C25ED1A86006E3B65 /* teamCellTableViewCell.swift */,
+				9DFA455D25ED1A86006E3B65 /* teamCellTableViewCell.xib */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -195,6 +207,7 @@
 		9D7341E425EB05AB003182D5 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				9DFA456125ED3CB8006E3B65 /* Extensions */,
 				9D0A22B525EB1A6F0093542A /* Helpers */,
 				9D7341E525EB05B4003182D5 /* Models */,
 			);
@@ -213,6 +226,7 @@
 		9DD482C225ECC5CA00D18655 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9DFA456525ED4204006E3B65 /* teamCreationViewController.swift */,
 				9D0CF8DF25ED13F0001B0BE9 /* pokemonSelectorViewController.swift */,
 				9DD482F825ECF0A500D18655 /* myTeamsViewController.swift */,
 				9DD482C425ECC5F200D18655 /* regionDetailPokemonViewController.swift */,
@@ -227,8 +241,17 @@
 				9DD482C525ECC5F200D18655 /* regionDetailPokemonViewController.xib */,
 				9DD482F925ECF0A500D18655 /* myTeamsViewController.xib */,
 				9D0CF8E025ED13F0001B0BE9 /* pokemonSelectorViewController.xib */,
+				9DFA456625ED4204006E3B65 /* teamCreationViewController.xib */,
 			);
 			path = Nibs;
+			sourceTree = "<group>";
+		};
+		9DFA456125ED3CB8006E3B65 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DFA456225ED3CFB006E3B65 /* UITableViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,8 +317,10 @@
 				9D7341CC25EAF4DA003182D5 /* Assets.xcassets in Resources */,
 				9D0CF8C325ECFC7A001B0BE9 /* popUps.storyboard in Resources */,
 				9D7341CA25EAF4D7003182D5 /* Main.storyboard in Resources */,
+				9DFA456825ED4204006E3B65 /* teamCreationViewController.xib in Resources */,
 				9DD482FB25ECF0A500D18655 /* myTeamsViewController.xib in Resources */,
 				9D0CF8E225ED13F0001B0BE9 /* pokemonSelectorViewController.xib in Resources */,
+				9DFA455F25ED1A86006E3B65 /* teamCellTableViewCell.xib in Resources */,
 				9D2B8DF425EC861600FEEEFF /* PokemonSolid.ttf in Resources */,
 				9D2B8DFC25EC8FBD00FEEEFF /* Typographica-Blp5.ttf in Resources */,
 				9DD482C725ECC5F200D18655 /* regionDetailPokemonViewController.xib in Resources */,
@@ -355,11 +380,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D2B8DF825EC8F5B00FEEEFF /* FontBlaster.swift in Sources */,
+				9DFA456725ED4204006E3B65 /* teamCreationViewController.swift in Sources */,
 				9D0CF8E125ED13F0001B0BE9 /* pokemonSelectorViewController.swift in Sources */,
 				9D2B8DEF25EC6B7200FEEEFF /* regionsTableViewCell.swift in Sources */,
 				9DD482D025ECDC6B00D18655 /* pokemonDetailTableViewCell.swift in Sources */,
 				9DD482CC25ECCE7900D18655 /* kantoResponseModel.swift in Sources */,
+				9DFA455E25ED1A86006E3B65 /* teamCellTableViewCell.swift in Sources */,
 				9D2B8DFF25EC907200FEEEFF /* fontHelper.swift in Sources */,
+				9DFA456325ED3CFB006E3B65 /* UITableViewExtensions.swift in Sources */,
 				9D7341C725EAF4D7003182D5 /* ViewController.swift in Sources */,
 				9D7341E125EAF98B003182D5 /* mainScreenViewController.swift in Sources */,
 				9DD482C625ECC5F200D18655 /* regionDetailPokemonViewController.swift in Sources */,
