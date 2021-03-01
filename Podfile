@@ -13,5 +13,6 @@ target 'PokeTeam Maker' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'SDWebImage'
+  pod 'IQKeyboardManager'
 
 end

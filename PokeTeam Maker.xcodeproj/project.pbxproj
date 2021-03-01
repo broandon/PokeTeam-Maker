@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D0CF8C325ECFC7A001B0BE9 /* popUps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0CF8C225ECFC7A001B0BE9 /* popUps.storyboard */; };
+		9D0CF8CA25ECFD63001B0BE9 /* addTeamPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CF8C925ECFD63001B0BE9 /* addTeamPopUpViewController.swift */; };
+		9D0CF8E125ED13F0001B0BE9 /* pokemonSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CF8DF25ED13F0001B0BE9 /* pokemonSelectorViewController.swift */; };
+		9D0CF8E225ED13F0001B0BE9 /* pokemonSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D0CF8E025ED13F0001B0BE9 /* pokemonSelectorViewController.xib */; };
 		9D2B8DEF25EC6B7200FEEEFF /* regionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B8DED25EC6B7200FEEEFF /* regionsTableViewCell.swift */; };
 		9D2B8DF025EC6B7200FEEEFF /* regionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D2B8DEE25EC6B7200FEEEFF /* regionsTableViewCell.xib */; };
 		9D2B8DF425EC861600FEEEFF /* PokemonSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D2B8DF325EC861600FEEEFF /* PokemonSolid.ttf */; };
@@ -36,6 +40,10 @@
 		0ADCECFDC9248D43D3F676E9 /* Pods-PokeTeam Maker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeTeam Maker.debug.xcconfig"; path = "Target Support Files/Pods-PokeTeam Maker/Pods-PokeTeam Maker.debug.xcconfig"; sourceTree = "<group>"; };
 		2D54530C58F72E1E983CFE88 /* Pods-PokeTeam Maker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeTeam Maker.release.xcconfig"; path = "Target Support Files/Pods-PokeTeam Maker/Pods-PokeTeam Maker.release.xcconfig"; sourceTree = "<group>"; };
 		38CB820DA31081B0C45B3042 /* Pods_PokeTeam_Maker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeTeam_Maker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D0CF8C225ECFC7A001B0BE9 /* popUps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = popUps.storyboard; sourceTree = "<group>"; };
+		9D0CF8C925ECFD63001B0BE9 /* addTeamPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTeamPopUpViewController.swift; sourceTree = "<group>"; };
+		9D0CF8DF25ED13F0001B0BE9 /* pokemonSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokemonSelectorViewController.swift; sourceTree = "<group>"; };
+		9D0CF8E025ED13F0001B0BE9 /* pokemonSelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pokemonSelectorViewController.xib; sourceTree = "<group>"; };
 		9D2B8DED25EC6B7200FEEEFF /* regionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regionsTableViewCell.swift; sourceTree = "<group>"; };
 		9D2B8DEE25EC6B7200FEEEFF /* regionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = regionsTableViewCell.xib; sourceTree = "<group>"; };
 		9D2B8DF325EC861600FEEEFF /* PokemonSolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonSolid.ttf; sourceTree = "<group>"; };
@@ -169,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				9D7341C825EAF4D7003182D5 /* Main.storyboard */,
+				9D0CF8C225ECFC7A001B0BE9 /* popUps.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -204,8 +213,10 @@
 		9DD482C225ECC5CA00D18655 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9D0CF8DF25ED13F0001B0BE9 /* pokemonSelectorViewController.swift */,
 				9DD482F825ECF0A500D18655 /* myTeamsViewController.swift */,
 				9DD482C425ECC5F200D18655 /* regionDetailPokemonViewController.swift */,
+				9D0CF8C925ECFD63001B0BE9 /* addTeamPopUpViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +226,7 @@
 			children = (
 				9DD482C525ECC5F200D18655 /* regionDetailPokemonViewController.xib */,
 				9DD482F925ECF0A500D18655 /* myTeamsViewController.xib */,
+				9D0CF8E025ED13F0001B0BE9 /* pokemonSelectorViewController.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -280,8 +292,10 @@
 			files = (
 				9D7341CF25EAF4DA003182D5 /* LaunchScreen.storyboard in Resources */,
 				9D7341CC25EAF4DA003182D5 /* Assets.xcassets in Resources */,
+				9D0CF8C325ECFC7A001B0BE9 /* popUps.storyboard in Resources */,
 				9D7341CA25EAF4D7003182D5 /* Main.storyboard in Resources */,
 				9DD482FB25ECF0A500D18655 /* myTeamsViewController.xib in Resources */,
+				9D0CF8E225ED13F0001B0BE9 /* pokemonSelectorViewController.xib in Resources */,
 				9D2B8DF425EC861600FEEEFF /* PokemonSolid.ttf in Resources */,
 				9D2B8DFC25EC8FBD00FEEEFF /* Typographica-Blp5.ttf in Resources */,
 				9DD482C725ECC5F200D18655 /* regionDetailPokemonViewController.xib in Resources */,
@@ -341,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D2B8DF825EC8F5B00FEEEFF /* FontBlaster.swift in Sources */,
+				9D0CF8E125ED13F0001B0BE9 /* pokemonSelectorViewController.swift in Sources */,
 				9D2B8DEF25EC6B7200FEEEFF /* regionsTableViewCell.swift in Sources */,
 				9DD482D025ECDC6B00D18655 /* pokemonDetailTableViewCell.swift in Sources */,
 				9DD482CC25ECCE7900D18655 /* kantoResponseModel.swift in Sources */,
@@ -352,6 +367,7 @@
 				9DD482FA25ECF0A500D18655 /* myTeamsViewController.swift in Sources */,
 				9D7341E725EB05C7003182D5 /* mainResponse.swift in Sources */,
 				9D7341C325EAF4D7003182D5 /* AppDelegate.swift in Sources */,
+				9D0CF8CA25ECFD63001B0BE9 /* addTeamPopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

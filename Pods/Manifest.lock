@@ -61,6 +61,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.0.0):
     - GoogleUtilities/Logger
   - Hero (1.5.0)
+  - IQKeyboardManager (6.5.6)
   - leveldb-library (1.22)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
@@ -78,6 +79,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Hero
+  - IQKeyboardManager
   - PokemonAPI
   - SDWebImage
   - TableViewReloadAnimation
@@ -94,6 +96,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - Hero
+    - IQKeyboardManager
     - leveldb-library
     - nanopb
     - PokemonAPI
@@ -112,6 +115,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 6ce8004a961db1b905740d7be106c61ba7e89c21
   GoogleUtilities: ffb2f4159f2c897c6e8992bd7fbcdef8a300589c
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PokemonAPI: bff9656c1825288e7f028b415ce6276122ad4c6a
@@ -119,6 +123,6 @@ SPEC CHECKSUMS:
   SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
   TableViewReloadAnimation: f3a4c4048efbc56331be98075f26a2e533a14c16
 
-PODFILE CHECKSUM: b292d438281ca06642c266dce79c95be091fca3f
+PODFILE CHECKSUM: 29de6f341705f7942975d24fd62f1585c0541cbb
 
 COCOAPODS: 1.9.1

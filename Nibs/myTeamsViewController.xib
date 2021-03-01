@@ -44,6 +44,18 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWG-ch-FY2">
+                            <rect key="frame" x="366" y="15" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="B6g-Vw-ik8"/>
+                                <constraint firstAttribute="width" constant="40" id="yBx-3e-mky"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="plus" catalog="system"/>
+                            <connections>
+                                <action selector="addTeam:" destination="-1" eventType="touchUpInside" id="Azg-Qt-hnh"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemRedColor"/>
                     <constraints>
@@ -53,6 +65,8 @@
                         <constraint firstItem="03L-lr-eno" firstAttribute="top" secondItem="jJX-mg-DY7" secondAttribute="top" constant="8" id="aui-Gs-0R4"/>
                         <constraint firstAttribute="bottom" secondItem="03L-lr-eno" secondAttribute="bottom" constant="8" id="f0E-zb-wlt"/>
                         <constraint firstItem="Qgv-M8-eUH" firstAttribute="leading" secondItem="jJX-mg-DY7" secondAttribute="leading" constant="8" id="gDB-b6-qOO"/>
+                        <constraint firstAttribute="trailing" secondItem="bWG-ch-FY2" secondAttribute="trailing" constant="8" id="i8i-dH-am3"/>
+                        <constraint firstItem="bWG-ch-FY2" firstAttribute="centerY" secondItem="jJX-mg-DY7" secondAttribute="centerY" id="oWZ-s2-OqU"/>
                     </constraints>
                 </view>
             </subviews>
@@ -69,6 +83,7 @@
     </objects>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
