@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fi8-XO-kK0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="mainScreenViewController" id="BYZ-38-t0r" customClass="mainScreenViewController" customModule="PokeTeam_Maker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZa-HC-A9e">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hqa-eG-MaO">
+                                        <rect key="frame" x="127" y="0.0" width="160" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="pkY-t8-fti"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="mainPokeLogo"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="mainPokeLogo"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1I-ib-tbr">
+                                        <rect key="frame" x="20" y="15" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="p3i-Mj-dSp"/>
+                                            <constraint firstAttribute="height" constant="40" id="rFB-D8-Zl8"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" image="line.horizontal.3" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6W-hZ-pbc">
+                                        <rect key="frame" x="354" y="15" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="T2S-cm-rqF"/>
+                                            <constraint firstAttribute="width" constant="40" id="l3S-7s-TTy"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" image="books.vertical" catalog="system"/>
+                                        <connections>
+                                            <action selector="openTeamsView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IL4-W5-aBE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hqa-eG-MaO" secondAttribute="bottom" id="BQF-hA-qZ9"/>
+                                    <constraint firstAttribute="height" constant="70" id="Tdl-qE-hI6"/>
+                                    <constraint firstItem="hqa-eG-MaO" firstAttribute="top" secondItem="EZa-HC-A9e" secondAttribute="top" id="XvD-nT-LJy"/>
+                                    <constraint firstItem="hqa-eG-MaO" firstAttribute="centerX" secondItem="EZa-HC-A9e" secondAttribute="centerX" id="bBD-5K-D8P"/>
+                                    <constraint firstItem="L1I-ib-tbr" firstAttribute="leading" secondItem="EZa-HC-A9e" secondAttribute="leading" constant="20" id="eWq-vf-bYZ"/>
+                                    <constraint firstItem="c6W-hZ-pbc" firstAttribute="centerY" secondItem="EZa-HC-A9e" secondAttribute="centerY" id="ejB-kd-BOF"/>
+                                    <constraint firstAttribute="trailing" secondItem="c6W-hZ-pbc" secondAttribute="trailing" constant="20" id="mk8-SP-VmW"/>
+                                    <constraint firstItem="L1I-ib-tbr" firstAttribute="centerY" secondItem="EZa-HC-A9e" secondAttribute="centerY" id="zHI-oc-K0w"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I0k-3S-aTd">
+                                <rect key="frame" x="0.0" y="164" width="414" height="732"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFM-dT-hdw">
+                                <rect key="frame" x="0.0" y="114" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VISÍTA LAS REGIONES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDy-Cz-NUw">
+                                        <rect key="frame" x="8" y="8" width="398" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstItem="wDy-Cz-NUw" firstAttribute="top" secondItem="sFM-dT-hdw" secondAttribute="top" constant="8" id="3KP-B3-d9o"/>
+                                    <constraint firstAttribute="bottom" secondItem="wDy-Cz-NUw" secondAttribute="bottom" constant="8" id="5zR-rW-VIT"/>
+                                    <constraint firstAttribute="height" constant="50" id="Bbm-dQ-HHE"/>
+                                    <constraint firstItem="wDy-Cz-NUw" firstAttribute="leading" secondItem="sFM-dT-hdw" secondAttribute="leading" constant="8" id="VYc-bG-Oox"/>
+                                    <constraint firstAttribute="trailing" secondItem="wDy-Cz-NUw" secondAttribute="trailing" constant="8" id="ZTb-gT-IO9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EZa-HC-A9e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7Nf-ae-UHH"/>
+                            <constraint firstItem="I0k-3S-aTd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Ny-rU-231"/>
+                            <constraint firstItem="sFM-dT-hdw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BNu-AR-d5M"/>
+                            <constraint firstItem="sFM-dT-hdw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NEe-TI-a8t"/>
+                            <constraint firstAttribute="bottom" secondItem="I0k-3S-aTd" secondAttribute="bottom" id="QQ4-YZ-O9F"/>
+                            <constraint firstItem="EZa-HC-A9e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UUG-sK-y58"/>
+                            <constraint firstItem="I0k-3S-aTd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YyD-4H-6pT"/>
+                            <constraint firstItem="sFM-dT-hdw" firstAttribute="top" secondItem="EZa-HC-A9e" secondAttribute="bottom" id="ZqL-tf-PlS"/>
+                            <constraint firstItem="EZa-HC-A9e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d2H-0d-Wc4"/>
+                            <constraint firstItem="I0k-3S-aTd" firstAttribute="top" secondItem="sFM-dT-hdw" secondAttribute="bottom" id="o6L-TT-cUm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="izl-rI-SL5"/>
+                    <connections>
+                        <outlet property="regionsTableView" destination="I0k-3S-aTd" id="Vye-Ia-RcH"/>
+                        <outlet property="toolBarView" destination="EZa-HC-A9e" id="cn3-oS-eUq"/>
+                        <outlet property="topLogo" destination="hqa-eG-MaO" id="Du0-wL-nnc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
+        </scene>
+        <!--Welcome Screen View Controller-->
+        <scene sceneID="2dM-Ie-2vo">
+            <objects>
+                <viewController storyboardIdentifier="welcomeScreenViewController" id="Fi8-XO-kK0" customClass="welcomeScreenViewController" customModule="PokeTeam_Maker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UiZ-io-N50">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ucm-wI-TkD">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="eg2-YH-olj"/>
+                                    <constraint firstAttribute="width" constant="240" id="nCb-HU-yqQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="mainPokeLogo"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="mainPokeLogo"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RaH-Bu-VRr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ucm-wI-TkD" firstAttribute="centerX" secondItem="UiZ-io-N50" secondAttribute="centerX" id="2DU-NS-Agm"/>
+                            <constraint firstItem="ucm-wI-TkD" firstAttribute="centerY" secondItem="UiZ-io-N50" secondAttribute="centerY" id="RAF-qb-7dX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wM6-t9-ppr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-597" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="books.vertical" catalog="system" width="128" height="103"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="mainLogo" width="800" height="294"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

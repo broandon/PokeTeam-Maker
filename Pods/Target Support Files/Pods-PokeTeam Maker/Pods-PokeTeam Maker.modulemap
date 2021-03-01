@@ -1,0 +1,6 @@
+framework module Pods_PokeTeam_Maker {
+  umbrella header "Pods-PokeTeam Maker-umbrella.h"
+
+  export *
+  module * { export * }
+}
